@@ -32,6 +32,10 @@ This is a C# console application that serves as a cybersecurity awareness chatbo
    - "safe browsing"
    - "how are you"
    - "goodbye" (to exit)
+  
+   - Link for the youtubeVideo
+   - https://youtu.be/kW72yaX3kOE?si=pvRUKcuPFJwEDOxi
+     
 
 ## Project Structure
 - `Program.cs` - Main entry point
