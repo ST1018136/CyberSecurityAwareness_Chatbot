@@ -1,0 +1,38 @@
+name: CyberSecurity Bot CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: windows-latest  # .NET Framework requires Windows
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.3
+    
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1
+    
+    - name: Restore NuGet packages
+      run: nuget restore CyberSecurityAwareness_Chatbot.csproj
+    
+    - name: Build solution
+      run: msbuild CyberSecurityAwareness_Chatbot.csproj /p:Configuration=Release
+    
+    - name: Run tests (if you have any)
+      run: |
+        echo "No tests configured yet"
+        # Add test commands here when you add tests
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: CyberSecurityBot-Build
+        path: bin\Release\
