@@ -49,6 +49,8 @@ This is a C# console application that serves as a cybersecurity awareness chatbo
 - The program will continue running even if the audio file is missing
 
 - Screenshot Of CI workFlow
+- <img width="1226" height="86" alt="Readme1" src="https://github.com/user-attachments/assets/37d928c4-3fda-44f4-be61-1e8a92440567" />
+
 
 
 
