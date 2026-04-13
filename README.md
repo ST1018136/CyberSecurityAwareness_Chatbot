@@ -48,6 +48,10 @@ This is a C# console application that serves as a cybersecurity awareness chatbo
 - Place `greeting.wav` in the same folder as the executable for voice greeting functionality
 - The program will continue running even if the audio file is missing
 
+- Screenshot Of CI workFlow
+- <img width="1523" height="648" alt="rEADME" src="https://github.com/user-attachments/assets/55e2b463-0637-4a89-9946-3591dc0931ef" />
+
+
 ## Author
 [Sefako Siphosethu Mongalo]
 [ST10181363]
