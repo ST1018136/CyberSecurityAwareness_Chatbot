@@ -1,16 +1,25 @@
-name: Build Check
+name: .NET Build
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  check-build:
+  build:
     runs-on: windows-latest
-    
+
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1
-    
-    - name: Build Project
-      run: msbuild CyberSecurityAwareness_Chatbot.csproj /p:Configuration=Debug
+   
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 6.0.x
+   
+    - name: Restore dependencies
+      run: dotnet restore
+   
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
